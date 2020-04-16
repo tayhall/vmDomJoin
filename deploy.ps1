@@ -40,6 +40,7 @@ $templateUri = "https://raw.githubusercontent.com/tayhall/vmDomJoin/master/azure
 
 New-AzResourceGroupDeployment `
     -ResourceGroupName $resourceGroupName `
+    -TemplateURI $templateUri `
     -domainPassword $adminPassword `
     -vmAdminPassword $adminPassword `
-    -TemplateURI $templateUri
+    
