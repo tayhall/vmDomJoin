@@ -32,7 +32,7 @@ $location = "eastus"
 $adminUsername = "Andrew"
 $adminPassword = Read-Host -Prompt "Enter the admin password" -AsSecureString
 $resourceGroupName = Read-Host -Prompt "Enter Resource Group Name"
-$dnsLabelPrefix = "mywan"
+$dnsLabelPrefix = "myvmwan"
 $existingVNETName = "adVNET"
 $existingSubnetName = "adSubnet"
 
@@ -42,5 +42,5 @@ New-AzResourceGroupDeployment `
     -ResourceGroupName $resourceGroupName `
     -TemplateURI $templateUri `
     -domainPassword $adminPassword `
-    -vmAdminPassword $adminPassword `
+    -vmAdminPassword $adminPassword
     
