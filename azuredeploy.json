@@ -32,7 +32,7 @@
     },
     "domainToJoin": {
       "type": "string",
-      "defaultValue" : "corp.UKTSTDOM.local",
+      "defaultValue" : "UKTSTDOM.local",
       "metadata": {
         "description": "The FQDN of the AD domain"
       }
