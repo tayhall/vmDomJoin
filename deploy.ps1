@@ -28,17 +28,19 @@ loadBalancerName              String                     adLoadBalancer
 # Inital Variables
 
 #$projectName = Read-Host -Prompt "Enter a project name that is used to generate resource group name"
-$location = Read-Host -Prompt "Enter the location (i.e. centralus)"
-$adminUsername = Read-Host -Prompt "Enter the virtual machine admin username"
+$location = "eastus"
+$adminUsername = "Andrew"
 $adminPassword = Read-Host -Prompt "Enter the admin password" -AsSecureString
-#$dnsLabelPrefix = Read-Host -Prompt "Enter the DNS label prefix. The load balancers name for the PIP"
-#$resourceGroupName = "${projectName}rg"
+$resourceGroupName = Read-Host -Prompt "Enter Resource Group Name"
+$domainPassword = $adminPassword
+$vmPassword = $adminPassword
+$dnsLabelPrefix = mywan
+$existingVNETName = "adVNET"
+$existingSubnetName = "adSubnet"
 
 $templateUri = "https://raw.githubusercontent.com/tayhall/vmDomJoin/master/azuredeploy.json"
 
 New-AzResourceGroupDeployment `
     -ResourceGroupName $resourceGroupName `
-    -adminUsername $adminUsername `
     -adminPassword $adminPassword `
-    -dnsLabelPrefix $dnsLabelPrefix `
     -TemplateURI $templateUri

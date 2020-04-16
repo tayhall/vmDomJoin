@@ -4,19 +4,21 @@
   "parameters": {
     "existingVNETName": {
       "type": "string",
+      "defaultValue" : "adVNET",
       "metadata": {
         "description": "Existing VNET that contains the domain controller"
       }
     },
     "existingSubnetName": {
       "type": "string",
+       "defaultValue" : "adSubnet",
       "metadata": {
         "description": "Existing subnet that contains the domain controller"
       }
     },
     "dnsLabelPrefix": {
       "type": "string",
-      "defaultValue" : "mywan.eastus.cloudapp.azure.com",
+      "defaultValue" : "mywan",
       "metadata": {
         "description": "Unique public DNS prefix for the deployment. The fqdn will look something like '<dnsname>.westus.cloudapp.azure.com'. Up to 62 chars, digits or dashes, lowercase, should start with a letter: must conform to '^[a-z][a-z0-9-]{1,61}[a-z0-9]$'."
       }
