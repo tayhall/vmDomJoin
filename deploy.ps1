@@ -32,9 +32,7 @@ $location = "eastus"
 $adminUsername = "Andrew"
 $adminPassword = Read-Host -Prompt "Enter the admin password" -AsSecureString
 $resourceGroupName = Read-Host -Prompt "Enter Resource Group Name"
-$domainPassword = $adminPassword
-$vmPassword = $adminPassword
-$dnsLabelPrefix = mywan
+$dnsLabelPrefix = "mywan"
 $existingVNETName = "adVNET"
 $existingSubnetName = "adSubnet"
 
@@ -42,5 +40,6 @@ $templateUri = "https://raw.githubusercontent.com/tayhall/vmDomJoin/master/azure
 
 New-AzResourceGroupDeployment `
     -ResourceGroupName $resourceGroupName `
-    -adminPassword $adminPassword `
+    -domainPassword $adminPassword `
+    -vmAdminPassword $adminPassword `
     -TemplateURI $templateUri
