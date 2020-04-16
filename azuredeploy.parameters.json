@@ -3,19 +3,19 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "existingVNETName": {
-      "value": "myvnet"
+      "value": "adVNET"
     },
     "existingSubnetName": {
-      "value": "subnet"
+      "value": "adSubnet"
     },
     "vmSize": {
       "value": "Standard_A2"
     },
     "domainToJoin": {
-      "value": "contoso.local"
+      "value": "UKTSTDOM.local"
     },
     "domainUsername": {
-      "value": "azuerUser"
+      "value": "Andrew"
     },
     "domainPassword": {
       "value": "P@ssword!"
@@ -24,13 +24,13 @@
       "value": 3
     },
     "vmAdminUsername": {
-      "value": "azureUser"
+      "value": "Andrew"
     },
     "vmAdminPassword": {
       "value": "P@ssword!"
     },
     "dnsLabelPrefix": {
-      "value": "GEN-UNIQUE" 
+      "value": "mywan" 
     }
   }
 }

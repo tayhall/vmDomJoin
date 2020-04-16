@@ -16,6 +16,7 @@
     },
     "dnsLabelPrefix": {
       "type": "string",
+      "defaultValue" : "mywan.eastus.cloudapp.azure.com",
       "metadata": {
         "description": "Unique public DNS prefix for the deployment. The fqdn will look something like '<dnsname>.westus.cloudapp.azure.com'. Up to 62 chars, digits or dashes, lowercase, should start with a letter: must conform to '^[a-z][a-z0-9-]{1,61}[a-z0-9]$'."
       }
@@ -29,12 +30,14 @@
     },
     "domainToJoin": {
       "type": "string",
+      "defaultValue" : "corp.UKTSTDOM.local"
       "metadata": {
         "description": "The FQDN of the AD domain"
       }
     },
     "domainUsername": {
       "type": "string",
+      "defaultValue": "Andrew",
       "metadata": {
         "description": "Username of the account on the domain"
       }
@@ -61,6 +64,7 @@
     },
     "vmAdminUsername": {
       "type": "string",
+      "defaultValue": "Andrew",
       "metadata": {
         "description": "The name of the administrator of the new VM and the domain. Exclusion list: 'admin','administrator"
       }
