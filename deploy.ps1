@@ -32,7 +32,7 @@ $location = "eastus"
 $adminUsername = "Andrew"
 $adminPassword = Read-Host -Prompt "Enter the admin password" -AsSecureString
 $resourceGroupName = Read-Host -Prompt "Enter Resource Group Name"
-$dnsLabelPrefix = "myvmwan"
+$dnsLabelPrefix = "mbsrv1"
 $existingVNETName = "adVNET"
 $existingSubnetName = "adSubnet"
 
