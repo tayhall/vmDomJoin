@@ -12,7 +12,7 @@
       "value": "Standard_A2"
     },
     "domainToJoin": {
-      "value": "UKTSTDOM.local"
+      "value": "corp.UKTSTDOM.local"
     },
     "domainUsername": {
       "value": "Andrew"
